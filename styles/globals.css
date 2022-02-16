@@ -11,6 +11,29 @@ a {
   text-decoration: none;
 }
 
-* {
+*{
   box-sizing: border-box;
+  padding: 0%px;
+  margin: 0px;
+}
+.open{
+  display: block;
+  /* position: absolute!important; */
+}
+.close{
+  display: none!important;
+  /* background-color: red; */
+}
+.color{
+  color:red;
+  display: none;
+}
+input , textarea{
+  caret-color: white;
+  color: white;
+  outline: none;
+}
+input::placeholder , textarea::placeholder{
+   color: white;
+   font-weight: bold;
 }
