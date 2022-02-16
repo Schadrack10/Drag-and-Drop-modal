@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Basic from "./Basic";
 
 
 
@@ -61,16 +62,15 @@ const Popup = () => {
                 padding: "10px ",
               }}
             >
-              <h5 style={{ fontWeight: "bolder" }}>
-                DRAG AND DROP THE SHOW COVER IMAGE
-              </h5>
-              <div
+         
+                   <Basic/>
+              {/* <div
                 style={{
                   height: "200px",
                   background: "#444",
                   margin: "10px 0",
                 }}
-              ></div>
+              ></div> */}
             </div>
             <div
               style={{
@@ -117,7 +117,7 @@ const Popup = () => {
       {/* the button that activates the pop up */}
       <button
         onClick={handleOpen}
-        style={{ padding: "10px", cursor: "pointer", margin: "10px" }}
+        style={{ padding: "10px", cursor: "pointer", margin: "40px 0" }}
       >
         open
       </button>
