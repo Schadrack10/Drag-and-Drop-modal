@@ -30,12 +30,13 @@ const style = {
 };
 
 export default function TransitionsModal() {
+   const [bool , setBool] = React.useState(false)
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
+  const handleCreate = ()=> setBool(true)
   return (
-    <div>
+    <div style={{height:"auto"}}>
       <Button variant="outlined" color="primary" sx={{margin:"0 40px"}} onClick={handleOpen}>Open modal</Button>
       <Modal
     
@@ -60,7 +61,7 @@ export default function TransitionsModal() {
             THE PUBLIC
             </Typography>
                <Box sx={{height:"250px",display:"flex"}}>
-               <Box style={{height:"100%",width:"50%"}}>
+               <Box style={{height:"100%",width:"50%",padding:"10px"}}>
                <Basic/>
                </Box>
                <Box style={{height:"100%",width:"50%",padding:"10px"}}>
@@ -88,7 +89,7 @@ export default function TransitionsModal() {
               <Button
                variant="outlined"
                 sx={{ '&:hover':{ background:"blue",color:"white" }}}
-                onClick={handleClose}
+                onClick={handleCreate}
               >
                 create
               </Button>

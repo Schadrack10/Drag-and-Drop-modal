@@ -16,6 +16,10 @@ const Popup = () => {
     console.log("cliked button");
     setBool(true);
   };
+   const title = {
+       color:"red",
+       fontSize:"10px"
+   }
 
 
   return (
@@ -46,7 +50,7 @@ const Popup = () => {
         >
           <h3 style={{ fontSize: "20px" }}>CREATE SHOWS</h3>
           <hr style={{ width: "100px", margin: "10px 0" }} />
-          <p style={{ fontSize: "13px", margin: "10px 0" }}>
+          <p style={title }>
             <b>NOTE :</b> ONLY SHOWS WITH VIDEOS UNDERNEATH THEM ARE VISIBLE TO
             THE PUBLIC
           </p>
