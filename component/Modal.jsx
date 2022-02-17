@@ -11,7 +11,7 @@ import Basic from './Basic';
 
 const input ={
     background:"#333",
-    color:"r"
+    color:"white"
 }
 
 const style = {
