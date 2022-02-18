@@ -88,7 +88,7 @@ const thumbsContainer = {
 };
 
 const thumb = {
-  display: 'inline-flex',
+  // display: 'inline-flex',
   borderRadius: 2,
   // border: '1px solid #eaeaea',
   // marginBottom: 8,
@@ -104,9 +104,8 @@ const thumbInner = {
   display: 'flex',
   minWidth: 0,
   width:"100%",
-  height:"100%"
-
-  // overflow: 'scroll'
+  height:"100%",
+  overflow: 'auto'
 };
 
 const img = {
@@ -115,12 +114,23 @@ const img = {
   height: '100%',
   objectFit:"cover"
 };
+const container = {
+    overflow:"auto"
 
+}
 
 function Previews(props) {
+
+const handleCheck = (e)=>{
+     console.log(e.target.value)
+}
+
   const [files, setFiles] = useState([]);
   const {getRootProps, getInputProps} = useDropzone({
-    accept: 'image/*',
+    accept: 'image/jpeg',
+    onClick : acceptedFiles => acceptedFiles.map(file => object.assign(file,{
+      preview:URL.createObjectURL(file)
+    })),
     onDrop: acceptedFiles => {
       setFiles(acceptedFiles.map(file => Object.assign(file, {
         preview: URL.createObjectURL(file)
@@ -136,6 +146,7 @@ function Previews(props) {
           style={img}
         />
       </div>
+      <div style={{margin:"10px 0"}}>file name :{file.name}</div>
     </div>
   ));
 
@@ -145,13 +156,13 @@ function Previews(props) {
   }, [files]);
 
   return (
-    <section className="container">
+    <section className="container" style={container}>
       <div {...getRootProps({className: 'dropzone'})}>
-        <input {...getInputProps()} />
+        <input {...getInputProps()} onclick={()=>handleCheck(e)}/>
         <p style={{fontSize:"12px",textTransform:"uppercase"}}>Drag 'n' drop the show cover image</p>
-        <p style={{fontSize:"10px",textTransform:"uppercase"}}>Accepted files </p>
+        <p style={{fontSize:"10px",textTransform:"uppercase",margin:"10px 0 5px 0"}}>Accepted files TYPES : jpeg/jpg </p>
         <div style={{height:"200px",width:"100%",background:"#222"}}>
-        <aside style={thumbsContainer}>
+        <aside style={thumbsContainer}  >
         {thumbs}
       </aside>
         </div>

@@ -16,3 +16,21 @@ a {
   padding: 0%px;
   margin: 0px;
 }
+::-webkit-scrollbar{
+  width: 5px;
+
+}
+
+input::placeholder{
+   color:white;
+}
+textarea::placeholder{
+  color:white;
+
+
+}
+input, textarea{
+  caret-color:white;
+  outline: none;
+  
+}

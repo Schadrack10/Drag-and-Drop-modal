@@ -66,15 +66,15 @@ export default function TransitionsModal() {
                </Box>
                <Box style={{height:"100%",width:"50%",padding:"10px"}}>
           
-               <Box sx={{height:"50px",padding:"10px 0",background:"#222",display:"flex",alignItems:"center",padding:"10px 0",}}>
-                    <p style={{margin:"0px 10px",fontSize:"14px"}}>{'SHOW NAME'}</p> 
+               <input style={{height:"50px",width:"100%",background:"#222",display:"flex",alignItems:"center",padding:"10px ",color:"white",border:"none"}} placeholder="SHOW NAME"/>
+                    {/* <p style={{margin:"0px 10px",fontSize:"14px"}}>{'SHOW NAME'}</p>  */}
                  
-               </Box>
+            
      
-               <Box sx={{height:"100px",padding:"10px 0",background:"#222",display:"flex",alignItems:"flex-start",padding:"10px 0",marginTop:"20px"}}>
-                    <p style={{margin:"0px 10px",fontSize:"14px"}}>{'SHOW DESCRIPTION'}</p> 
+               <textarea placeholder="SHOW DESCRIPTION" style={{border:"none",width:"100%",height:"100px",padding:"10px 0",background:"#222",display:"flex",alignItems:"flex-start",padding:"10px 0",marginTop:"20px",padding:"10px",color:"white"}}>
+                    {/* <p style={{margin:"0px 10px",fontSize:"14px"}}>{'SHOW DESCRIPTION'}</p>  */}
                  
-               </Box>
+               </textarea>
 
                <Box sx={{display:"flex",justifyContent:"space-between", marginTop:"20px"}}>
                <Button
